@@ -9,6 +9,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
 
     grunt.initConfig({
+        pkg: grunt.file.readJSON("package.json"),
+        enfear: {
+            Opcao: {
+                banner: '/ *!<% = pkg.name%> <% = grunt.template.today("aaa-mm-dd")%> * /\n'
+            }
+        },
+        construir: {
+
+        }
 
     });
 };
